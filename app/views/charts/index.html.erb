@@ -1,12 +1,11 @@
 <script type='text/javascript' src='/javascripts/swfobject.js'></script>
 
- 
-<div class='wrapper'>
+<div class='section'>
   <h2>Charts</h2>
-
-  <%= @line.html_safe %>
-  <%= @pie.html_safe %>
-  <%= @graph.html_safe %>
-  <%= @line_dot.html_safe %>
-
+  <ul class='list'>
+    <% @charts.each do |chart| %>
+    <li class='clearfix'> <%= chart.html_safe %></li>
+    <% end %>
+  </ul>
+  <%= will_paginate @charts, :previous_label => '上一页', :next_label => '下一页' %>
 </div>

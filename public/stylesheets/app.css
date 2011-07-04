@@ -817,10 +817,6 @@ img.user-avatar {
 	list-style:none outside none;
 }
 
-.bookmarks ul li span {
-  cursor: pointer;
-}
-
 .bookmarks li {
 	float:left;
 	margin:0 5px;
@@ -878,7 +874,7 @@ div.panel {
 
 .pagination {
 	display:inline;
-	float:right;
+	float:left;
 	margin-top:25px;
 }
 

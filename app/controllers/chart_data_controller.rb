@@ -69,6 +69,49 @@ class ChartDataController < ApplicationController
 
     render :text => chart, :layout => false
   end
+
+  def get_hollowdot
+    data1 = []
+    data2 = []
+    year = Time.new.year
+
+    31.times do |i|
+      x = "#{year}-1-#{i+1}".to_time.to_i
+      y = (Math.sin(i+1) * 2.5) + 10
+      data1 << ScatterValue.new(x,y)
+      data2 << (Math.cos(i+1) * 1.9) + 4
+    end
+    
+    dot = HollowDot.new
+    dot.size = 3
+    dot.halo_size = 2
+    dot.tooltip = "#date:d M y#<br>Value: #val#"
+
+    line = ScatterLine.new("#DB1750", 3)
+    line.values = data1
+    line.default_dot_style = dot
+
+    x = XAxis.new
+    x.set_range("#{year}-1-1".to_time.to_i, "#{year}-1-31".to_time.to_i)
+    x.steps = 86400
+    labels = XAxisLabels.new
+    labels.text = "#date: l jS, M Y#"
+    labels.steps = 86400
+    labels.visible_steps = 2
+    labels.rotate = 90
+    x.labels = labels
+
+    y = YAxis.new
+    y.set_range(0,15,5)
+    chart = OpenFlashChart.new
+    title = Title.new(data2.size)
+
+    chart.title = title
+    chart.add_element(line)
+    chart.x_axis = x
+    chart.y_axis = y
+    render :text => chart, :layout => false
+  end
   
   def get_dot
     data = []
@@ -101,6 +144,27 @@ class ChartDataController < ApplicationController
     chart.y_axis = y
 
     chart.add_element(line_dot)
+
+    render :text => chart.to_s
+  end
+
+  def get_hbar
+    title = Title.new('HBar')
+    hbar = HBar.new
+    hbar.values = [HBarValue.new(0, 4), HBarValue.new(4,8), HBarValue.new(8,10)]
+    chart = OpenFlashChart.new
+    chart.set_title(title)
+    chart.add_element(hbar)
+
+    x = XAxis.new
+    x.set_offset(false)
+    x.set_labels(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'])
+    chart.set_x_axis(x)
+
+    y = YAxis.new
+    y.set_offset(true)
+    y.set_labels(["Make garden","Paint house","Move into house"])
+    chart.set_y_axis(y)
 
     render :text => chart.to_s
   end
@@ -147,18 +211,18 @@ class ChartDataController < ApplicationController
     line2.values = data2
 
     # Added these lines since the previous tutorial
-#    tmp = []
-#    x_labels = XAxisLabels.new
-#    x_labels.set_vertical()
+    tmp = []
+    x_labels = XAxisLabels.new
+    x_labels.set_vertical()
 
-#    %w(one two three four five six seven eight nine ten).each do |text|
-#      tmp << XAxisLabel.new(text, '#0000ff', 20, 'diagonal')
-#    end
-#    logger.info(tmp)
-#    x_labels.labels = tmp
-#    x = XAxis.new
-#    x.set_labels(x_labels)
-    # new up to here ...
+    %w(one two three four five six seven eight nine ten).each do |text|
+      tmp << XAxisLabel.new(text, '#0000ff', 20, 'diagonal')
+    end
+
+    x_labels.labels = tmp
+    x = XAxis.new
+    x.set_labels(x_labels)
+   # new up to here ...
 
     y = YAxis.new
     y.set_range(0,20,5)
@@ -169,7 +233,7 @@ class ChartDataController < ApplicationController
     y_legend = YLegend.new("Y Legend")
     y_legend.set_style('{font-size: 20px; color: #770077}')
 
-    chart =OpenFlashChart.new
+    chart = OpenFlashChart.new
     chart.set_title(title)
     chart.set_x_legend(x_legend)
     chart.set_y_legend(y_legend)
@@ -179,7 +243,7 @@ class ChartDataController < ApplicationController
     chart.add_element(line_dot)
     chart.add_element(line_hollow)
     chart.add_element(line)
-    chart.add_element(line2)
+#    chart.add_element(line2)
 
     render :text => chart.to_s
   end
