@@ -1,0 +1,14 @@
+<script type='text/javascript' src='/javascripts/swfobject.js'></script>
+
+ 
+<div class='wrapper'>
+  <h2>Charts</h2>
+  <% @charts.each do |chart| %>
+    <%= chart.html_safe %>
+  <% end %>
+
+  <div class='pagination'>
+    <%= will_paginate @charts %>
+  </div>
+</div>
+

@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="Ruby 语言, rails web 框架深入, Ruby on rails编程, Rails Web开发, 企业级应用, Ruby设计模式, Rails开源系统,服务器部署与应用,Ruby on rails问题交流与讨论,Ruby DSL开发,Ruby on rails实践,JavaScript编程,敏捷软件开发XP TDD,数据库,精通linux系统, Thoughtrails中文ruby on rails技术交流与社区" />
+	<meta name="keyword" content="Ruby编程 Rails框架 AJAX技术 Agile敏捷软件开发 ruby on rails实践 Thoughtrails中文ruby on rails技术交流与社区" />
+
+	<title>Ruby编程 Rails框架深入浅出 Agile敏捷软件开发 ruby on rails实践 - Thoughtrails做最专一的Ruby on rails中文技术分享与交流平台</title>
+
+	<link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/app.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/syntax.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+
+	<script src="/javascripts/jquery.js" type="text/javascript"></script>
+<script src="/javascripts/rails.js" type="text/javascript"></script>
+<script src="/javascripts/guides.js" type="text/javascript"></script>
+	
+	<!--[if IE 6]>
+		<link href="/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<link href="/feeds.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+	
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	
+	
+	
+
+</head>
+<body class="guide">
+	
+	<div id="topNav">
+	<div class="wrapper top-nav-text">
+		<strong><a href="/" title="首页">首页</a></strong> |
+		<strong><a href="/pages" title="关于我们">关于我们</a></strong> |
+		<strong><a href="/accounts">用户群体</a></strong> |
+			<strong><a href="/signup" title="注册">注册</a></strong> |
+			<strong><a href="/user_session/new" title="登录">登录</a></strong>
+	</div>
+</div>
+	<div id="header">
+	<div class="wrapper clearfix">
+		<h1><a href="/" title="Return to home page">Guides.rubyonrails.org</a></h1>
+		<p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+		<ul class="nav">
+			<li style="font-size:14px;"><a href="/episodes">敏捷开发最佳实践</a></li>
+			<li style="font-size:14px;"><a href="/gems">GemDigger</a></li>
+			<li style="font-size:14px;"><a href="/questions">问题交流</a></li>
+			<li style="font-size:14px;"><a href="/books">书籍资料</a></li>
+			<li style="font-size:14px;"><a href="/jobs">职位招聘</a></li>
+			<li style="font-size:14px;"><a href="/events">线下活动</a></li>
+			<li style="font-size:14px;"><a href="/articles">圈内资讯</a></li>
+		</ul>
+	</div>
+</div>
+<hr class="hide" />
+	
+		<div id="feature">
+	<div class="wrapper">
+		<h3>Ruby on rails中文分享与交流平台</h3>
+		<p>
+			 在Thoughtrails, 你可以随时和朋友分享开发中的经验和技巧、提出问题和找到自己合适的职位等。
+				你已经有帐号了？ 那么请<a href="/login">登录</a>吧，如果没有，马上<a href="/signup">加入我们</a>!
+		</p>
+
+		<div id="subCol">
+			<div class="navigator">
+	<a href="/profile/episodes/new" title="分享最佳实践"><img alt="add episode" src="/images/share_hover.gif" /></a>
+
+	<a href="/profile/questions/new" title="ask_question"><img alt="add question" src="/images/question_hover.gif" /></a>
+	
+	<a href="/profile/gems/new" title="ask_gem"><img alt="add gem" src="/images/add_gem.gif" /></a>
+</div>
+
+<div class="navigator category">
+	<h4>按栏目浏览</h4>
+	<dl>
+			<dd><a href="/categories/develop">ruby on rails 开发 (122)</a></dd>
+			<dd><a href="/categories/server">开发环境/服务器部署与优化 (38)</a></dd>
+			<dd><a href="/categories/lib">插件、工具和代码库 (33)</a></dd>
+			<dd><a href="/categories/frontend">前端开发 (8)</a></dd>
+			<dd><a href="/categories/undefined">未分栏目 (4)</a></dd>
+	</dl>
+</div>
+
+<div class="navigator subject">
+	<h4>按内容浏览</h4>
+	<dl>
+		<dd><a href="/episodes">敏捷开发最佳实践 (100篇)</a></dd>
+		<dd><a href="/gems">GemDigger (已digger了15个)</a></dd>
+		<dd><a href="/questions">问题交流 (29个已解决, 76个待解决)</a></dd>
+		<dd><a href="/jobs">职位招聘 (已提供29个职位)</a></dd>
+		<dd><a href="/books">书籍资料 (已经提供19本)</a></dd>
+	</dl>
+</div>
+
+<div class="navigator recommend-books">
+	<h4>推荐书籍</h4>
+	<dl>
+			<a href="/books/19-pragmatic-metaprogramming-ruby-feb-2010"><img alt="Cover_metaprogramming ruby" src="/system/pictures/38/cover_Metaprogramming Ruby.png" /></a>
+			<p class="promote"><a href="/books/19-pragmatic-metaprogramming-ruby-feb-2010">Metaprogramming Ruby</a></p>
+	</dl>
+</div>
+
+<div class="navigator tags">
+	<h4>热门标签浏览</h4>
+	<ul class="tags">
+			<li><span class="user_flag"><a href="/tags/rails3">rails3</a></span></li>
+			<li><span class="user_flag"><a href="/tags/plugin">plugin</a></span></li>
+			<li><span class="user_flag"><a href="/tags/rails">rails</a></span></li>
+			<li><span class="user_flag"><a href="/tags/environment">environment</a></span></li>
+			<li><span class="user_flag"><a href="/tags/model">model</a></span></li>
+			<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+			<li><span class="user_flag"><a href="/tags/design%20pattern">design pattern</a></span></li>
+			<li><span class="user_flag"><a href="/tags/tools">tools</a></span></li>
+			<li><span class="user_flag"><a href="/tags/linux">linux</a></span></li>
+			<li><span class="user_flag"><a href="/tags/ruby">ruby</a></span></li>
+	</ul>
+</div>
+
+<div class="navigator ad">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5025976052035215";
+/* home sidebar */
+google_ad_slot = "7848873254";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="/javascripts/show_ads.js">
+</script>
+</div>
+		</div>
+
+	</div>
+</div>
+
+
+	
+	<div id="container">
+		<div class="wrapper">
+			<div id="mainCol">
+
+				
+				
+<div class="clearfix">
+	<h2>最新实践分享<span class="kicker">最近发布的敏捷开发最佳实践 <em style="float:right;"><a href="/episodes">浏览更多</a></em></span></h2>
+	<ul class="latest">
+		<li>
+			<a title="rails seed 中使用 paperclip 保存图片 " class="link" href="/episodes/120-">
+				<span title="rails seed 中使用 paperclip 保存图片 " class="title"><span>rails seed 中使用 paperclip 保存图片 </span></span>
+				<span class="details">2 个回复, 136 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/vkill"><img alt="" height="20" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg" width="20" /></a>
+					<a href="/accounts/vkill">vkill</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/paperclip">paperclip</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="rake auto generate i18n.zh-CN.activerecord " class="link" href="/episodes/119-">
+				<span title="rake auto generate i18n.zh-CN.activerecord " class="title"><span>rake auto generate i18n.zh-CN.activerecord </span></span>
+				<span class="details">0 个回复, 92 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/vkill"><img alt="" height="20" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg" width="20" /></a>
+					<a href="/accounts/vkill">vkill</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/rake%20activerecord">rake activerecord</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="RVM下遇到的openssl的问题解决分享" class="link" href="/episodes/118-">
+				<span title="RVM下遇到的openssl的问题解决分享" class="title"><span>RVM下遇到的openssl的问题解决分享</span></span>
+				<span class="details">0 个回复, 99 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/kewin"><img alt="" height="20" src="http://0.gravatar.com/avatar/982c2af3279a52b77385c8615662630b.jpg" width="20" /></a>
+					<a href="/accounts/kewin">kewin</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/rvm">rvm</a> &nbsp;
+						</span>
+						<span class="tag_flag">
+							<a href="/tags/openssl">openssl</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="install rails 3.1 rc with RVM" class="link" href="/episodes/117-install-rails3-dot-1-rc-with-rvm">
+				<span title="install rails 3.1 rc with RVM" class="title"><span>install rails 3.1 rc with RVM</span></span>
+				<span class="details">0 个回复, 282 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/jerry"><img alt="" height="20" src="http://www.gravatar.com/avatar/6746ab5a9b678fe35b7dab847b24cbea.jpg" width="20" /></a>
+					<a href="/accounts/jerry">jerry</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/rails">rails</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="rails rake 获取所有model类名 " class="link" href="/episodes/116-">
+				<span title="rails rake 获取所有model类名 " class="title"><span>rails rake 获取所有model类名 </span></span>
+				<span class="details">0 个回复, 195 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/vkill"><img alt="" height="20" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg" width="20" /></a>
+					<a href="/accounts/vkill">vkill</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/rake">rake</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="memcached 深度解析（四）" class="link" href="/episodes/115-memcached-Depth-analytical-04">
+				<span title="memcached 深度解析（四）" class="title"><span>memcached 深度解析（四）</span></span>
+				<span class="details">0 个回复, 186 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/yuren"><img alt="" height="20" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg" width="20" /></a>
+					<a href="/accounts/yuren">yuren</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/memcached">memcached</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="memcached 深度解析（三）" class="link" href="/episodes/114-memcached-Depth-analytical-03">
+				<span title="memcached 深度解析（三）" class="title"><span>memcached 深度解析（三）</span></span>
+				<span class="details">0 个回复, 185 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/yuren"><img alt="" height="20" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg" width="20" /></a>
+					<a href="/accounts/yuren">yuren</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/memcached">memcached</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="Quickstart Guide to Using Compass, Haml, SASS, SCSS with Rails 3" class="link" href="/episodes/113-quickstart-guide-to-using-compass-haml-sass-scss-with-rails3">
+				<span title="Quickstart Guide to Using Compass, Haml, SASS, SCSS with Rails 3" class="title"><span>Quickstart Guide to Using Compass, Haml, SASS, SCSS with Rails 3</span></span>
+				<span class="details">2 个回复, 325 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/jerry"><img alt="" height="20" src="http://www.gravatar.com/avatar/6746ab5a9b678fe35b7dab847b24cbea.jpg" width="20" /></a>
+					<a href="/accounts/jerry">jerry</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/rails3">rails3</a> &nbsp;
+						</span>
+						<span class="tag_flag">
+							<a href="/tags/plugin">plugin</a> &nbsp;
+						</span>
+			</div>
+		</li>
+		<li>
+			<a title="memcached 深度解析（二）" class="link" href="/episodes/112-memcached-Depth-analytical-02">
+				<span title="memcached 深度解析（二）" class="title"><span>memcached 深度解析（二）</span></span>
+				<span class="details">0 个回复, 176 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/yuren"><img alt="" height="20" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg" width="20" /></a>
+					<a href="/accounts/yuren">yuren</a>
+				</span>
+			</div>
+			
+			<div class="tags">
+						<span class="tag_flag">
+							<a href="/tags/memcached">memcached</a> &nbsp;
+						</span>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+<div class="clearfix">
+
+	<h2>最新问题<span class="kicker">开发中遇到疑问吗？赶紧把你的问题和大家分享吧！ <em style="float:right;"><a href="/questions">浏览更多</a></em></span></h2>
+	<ul class="latest">
+		<li>
+			<a title="Centos如何部署Rails3+MongoDB环境" class="link" href="/questions/124-">
+				<span title="Centos如何部署Rails3+MongoDB环境" class="title"><span>Centos如何部署Rails3+MongoDB环境</span></span>
+				<span class="details">2 个回答, 129 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/jesaica" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/c620e701a4d7c47617262ed96c2999bd.jpg" width="20" /></a>
+					<a href="/accounts/jesaica" title="查看{{name}}的个人资料页">jesaica</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/rails3">rails3</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/gem">gem</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/mongodb">mongodb</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="自定义类放在哪个目录使得在Views中能访问？" class="link" href="/questions/123-">
+				<span title="自定义类放在哪个目录使得在Views中能访问？" class="title"><span>自定义类放在哪个目录使得在Views中能访问？</span></span>
+				<span class="details">1 个回答, 119 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/philobc" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/0ffd88b99b7acc8ae3e1b0f093f76e54.jpg" width="20" /></a>
+					<a href="/accounts/philobc" title="查看{{name}}的个人资料页">philobc</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/views">views</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB?nav=questions">自定义类</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="how to use &quot;acts_as_taggable&quot; in rails3" class="link" href="/questions/122-">
+				<span title="how to use &quot;acts_as_taggable&quot; in rails3" class="title"><span>how to use &quot;acts_as_taggable&quot; in rails3</span></span>
+				<span class="details">1 个回答, 126 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/nylijun" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://2.gravatar.com/avatar/f3bf2a3d99302315df8f1aba02920fda.jpg?alt=nylijun&amp;s=20" width="20" /></a>
+					<a href="/accounts/nylijun" title="查看{{name}}的个人资料页">nylijun</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/rails3?nav=questions">rails3</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/acts_as_taggable?nav=questions">acts_as_taggable</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="NetBeans6.9.1Ruby写程序报错" class="link" href="/questions/121-">
+				<span title="NetBeans6.9.1Ruby写程序报错" class="title"><span>NetBeans6.9.1Ruby写程序报错</span></span>
+				<span class="details">3 个回答, 141 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/master4007" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://2.gravatar.com/avatar/4f18d2e1c1a65448907f1b1f00f3dd0e.jpg?alt=master4007&amp;s=20" width="20" /></a>
+					<a href="/accounts/master4007" title="查看{{name}}的个人资料页">master4007</a>
+				</span>
+			</div>
+			<div class="tags">
+			</div>
+		</li>
+		<li>
+			<a title="如何找到无效的方法" class="link" href="/questions/120-">
+				<span title="如何找到无效的方法" class="title"><span>如何找到无效的方法</span></span>
+				<span class="details">1 个回答, 126 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/mike_gao" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/ff7d1af99aedf2a34e6b0c0e8d99397a.jpg?alt=mike_gao&amp;s=20" width="20" /></a>
+					<a href="/accounts/mike_gao" title="查看{{name}}的个人资料页">mike_gao</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/rails?nav=questions">rails</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="carrierwave+jcrop" class="link" href="/questions/119-">
+				<span title="carrierwave+jcrop" class="title"><span>carrierwave+jcrop</span></span>
+				<span class="details">0 个回答, 154 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/Jeweller" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/655bd6acdceadb33f1825e65c0d21714.jpg?alt=Jeweller&amp;s=20" width="20" /></a>
+					<a href="/accounts/Jeweller" title="查看{{name}}的个人资料页">Jeweller</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/%E5%A4%B4%E5%83%8F%E4%B8%8A%E4%BC%A0%20%E5%89%AA%E5%88%87?nav=questions">头像上传 剪切</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="怎样在系统的后台自定义路径" class="link" href="/questions/118-rails-routes-customize">
+				<span title="怎样在系统的后台自定义路径" class="title"><span>怎样在系统的后台自定义路径</span></span>
+				<span class="details">2 个回答, 151 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/nepalon" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/78caeeb6c0003ad4c8c8f36541243d96.jpg?alt=nepalon&amp;s=20" width="20" /></a>
+					<a href="/accounts/nepalon" title="查看{{name}}的个人资料页">nepalon</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/rails?nav=questions">rails</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/routes?nav=questions">routes</a> &nbsp;
+					</span>
+					<span class="tag_flag">
+						<a href="/tags/customize?nav=questions">customize</a> &nbsp;
+					</span>
+			</div>
+		</li>
+		<li>
+			<a title="寻求国内布署方案" class="link" href="/questions/117-">
+				<span title="寻求国内布署方案" class="title"><span>寻求国内布署方案</span></span>
+				<span class="details">1 个回答, 192 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/hhuai" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/886b9a75a6b4ab3e8da3a03ecc2b9d80.jpg?alt=hhuai&amp;s=20" width="20" /></a>
+					<a href="/accounts/hhuai" title="查看{{name}}的个人资料页">hhuai</a>
+				</span>
+			</div>
+			<div class="tags">
+			</div>
+		</li>
+		<li>
+			<a title="禁用cookie的浏览器如何读取用户信息" class="link" href="/questions/115-">
+				<span title="禁用cookie的浏览器如何读取用户信息" class="title"><span>禁用cookie的浏览器如何读取用户信息</span></span>
+				<span class="details">0 个回答, 140 次浏览</span>
+			</a>
+			<div class="contributor">
+				<span class="user_flag">
+					<a href="/accounts/minix" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/f6ec1c67c60ffc83c20535782845783b.jpg?alt=minix&amp;s=20" width="20" /></a>
+					<a href="/accounts/minix" title="查看{{name}}的个人资料页">minix</a>
+				</span>
+			</div>
+			<div class="tags">
+					<span class="tag_flag">
+						<a href="/tags/rails?nav=questions">rails</a> &nbsp;
+					</span>
+			</div>
+		</li>
+
+	</ul>
+</div>
+
+<div class="clearfix">
+	<a href="/pages/progress" title="we are improving"><img alt="we are improving" src="/images/improving.jpg?1303661331" /></a>
+</div>
+
+<div class="clearfix">
+	<h2>圈内资讯<span class="kicker">最新推荐文章、最新招聘<em style="float:right;"><a href="/articles">浏览更多</a></em></span></h2>
+
+	<ul class="articles">
+		<li>
+				<a href="/articles/86-Firebug-1dot8b2" class="link" title="Firebug 1.8b2 发布">Firebug 1.8b2 发布</a>
+				<a href="/articles/85-Microsoft-85-million-married-SKYPE" class="link" title="微软：85亿迎娶SKYPE">微软：85亿迎娶SKYPE</a>
+				<a href="/articles/84-nginx-1dot0dot2" class="link" title="nginx 1.0.2 发布">nginx 1.0.2 发布</a>
+				<a href="/articles/83-Nginx-1dot0dot1" class="link" title="Nginx 1.0.1 发布">Nginx 1.0.1 发布</a>
+				<a href="/articles/82-jQuery-EasyUI-1dot2dot3%20" class="link" title="jQuery-EasyUI 1.2.3 发布">jQuery-EasyUI 1.2.3 发布</a>
+				<a href="/articles/81-Ubuntu-11dot04-Natty-Narwhal" class="link" title="Ubuntu 11.04 Natty Narwhal 正式发布">Ubuntu 11.04 Natty Narwhal 正式发布</a>
+				<a href="/articles/80-Ubuntu-11dot04-after-installation-to-do-20-thing" class="link" title="Ubuntu 11.04 安装后要做的20件事">Ubuntu 11.04 安装后要做的20件事</a>
+		</li>
+		
+		<li>
+				<a href="/jobs/30" class="link" title="爱点击科技（北京）有限公司招聘Ruby on Rails 开发工程师">爱点击科技（北京）有限公司招聘Ruby on Ra...</a>
+				<a href="/jobs/29" class="link" title="美国创业公司Buz互动招聘高级Ruby程序员">美国创业公司Buz互动招聘高级Ruby程序员</a>
+				<a href="/jobs/28" class="link" title="上海词海信息技术有限公司招聘Ruby程序员">上海词海信息技术有限公司招聘Ruby程序员</a>
+				<a href="/jobs/27" class="link" title="北京俩只象网络科技有限公司招聘rails工程师">北京俩只象网络科技有限公司招聘rails工程师</a>
+				<a href="/jobs/26" class="link" title="上海健吾投资咨询管理有限公司招初级ROR程序员">上海健吾投资咨询管理有限公司招初级ROR程序员</a>
+				<a href="/jobs/24" class="link" title="上海漫点网络科技有限公司诚招Web开发人员">上海漫点网络科技有限公司诚招Web开发人员</a>
+				<a href="/jobs/23" class="link" title="北京软件创业企业诚聘资深Rails工程师（多名）">北京软件创业企业诚聘资深Rails工程师（多名）</a>
+		</li>
+
+	</ul>
+</div>
+
+<div class="clearfix">
+	<h2>Gem Digger<span class="kicker">您可以将不错的gem发布到gem digger上，并将英文文档转化成中文文档，方便大家学习。 <em style="float:right;"><a href="/gems">浏览更多</a></em></span></h2>
+	<br />
+	<ul class="betatesters">
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/client_side_validations">client_side_validations</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/symbolize">symbolize</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/ar_mailer_rails3">ar_mailer_rails3</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/maruku">maruku</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/annotate">annotate</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/formtastic">formtastic</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/acts-as-taggable-on">acts-as-taggable-on</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/meta_search">meta_search</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/tagged-cache">tagged-cache</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/rails-settings-cached">rails-settings-cached</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/wice_grid">wice_grid</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/typus">typus</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/Smurf">Smurf</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/paperclip">paperclip</a>
+			</span>
+		</li>
+		<li>
+			<span class="gem_flag">
+				<a href="/gems/authlogic">authlogic</a>
+			</span>
+		</li>
+	</ul>
+</div>
+
+<div class="clearfix">
+	<h2>活跃用户<span class="kicker">参与到网站当中，分享你的最佳实践、回答他人的问题、添加回复等等都可以给你带来积分！</span></h2>
+	<br />
+	<ul class="betatesters">
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/jerry" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/6746ab5a9b678fe35b7dab847b24cbea.jpg?alt=jerry&amp;s=20" width="20" /></a>
+				<a href="/accounts/jerry" title="查看{{name}}的个人资料页">jerry</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/yuren" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg?alt=yuren&amp;s=20" width="20" /></a>
+				<a href="/accounts/yuren" title="查看{{name}}的个人资料页">yuren</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/vkill" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg?alt=vkill&amp;s=20" width="20" /></a>
+				<a href="/accounts/vkill" title="查看{{name}}的个人资料页">vkill</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/aoner" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/5b6e311dd0573e4150a0e24e7079b458.jpg?alt=aoner&amp;s=20" width="20" /></a>
+				<a href="/accounts/aoner" title="查看{{name}}的个人资料页">aoner</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/zhangcaiyan" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/3b604a7245eff4c6348d3db2e44b79fb.jpg?alt=zhangcaiyan&amp;s=20" width="20" /></a>
+				<a href="/accounts/zhangcaiyan" title="查看{{name}}的个人资料页">zhangcaiyan</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/51515" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/64a07a518a84d09eaf4f66bd6f9826c1.jpg?alt=51515&amp;s=20" width="20" /></a>
+				<a href="/accounts/51515" title="查看{{name}}的个人资料页">51515</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/nepalon" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/78caeeb6c0003ad4c8c8f36541243d96.jpg?alt=nepalon&amp;s=20" width="20" /></a>
+				<a href="/accounts/nepalon" title="查看{{name}}的个人资料页">nepalon</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/Top" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://2.gravatar.com/avatar/0c738ee0b5a0b98adc9f8b1e9948f108.jpg?alt=Top&amp;s=20" width="20" /></a>
+				<a href="/accounts/Top" title="查看{{name}}的个人资料页">Top</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/kart" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/a873b25c301863952d264b6654c293e3.jpg?alt=kart&amp;s=20" width="20" /></a>
+				<a href="/accounts/kart" title="查看{{name}}的个人资料页">kart</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/fredwu" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/aa6a67c6844f765480e61593cdbf3f04.jpg?alt=fredwu&amp;s=20" width="20" /></a>
+				<a href="/accounts/fredwu" title="查看{{name}}的个人资料页">fredwu</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/Hisea" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/fa45f66688b148b999faadb759bcf2dc.jpg?alt=Hisea&amp;s=20" width="20" /></a>
+				<a href="/accounts/Hisea" title="查看{{name}}的个人资料页">Hisea</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/Dean" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/bf953b6b1f3ddd92a76af099a46b71dd.jpg?alt=Dean&amp;s=20" width="20" /></a>
+				<a href="/accounts/Dean" title="查看{{name}}的个人资料页">Dean</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/blackanger" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://2.gravatar.com/avatar/ea44bd120ed7cf301d561bcc3e7a6c96.jpg?alt=blackanger&amp;s=20" width="20" /></a>
+				<a href="/accounts/blackanger" title="查看{{name}}的个人资料页">blackanger</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/hywhy" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/45a837619b535f238b31e8cf586bc44a.jpg?alt=hywhy&amp;s=20" width="20" /></a>
+				<a href="/accounts/hywhy" title="查看{{name}}的个人资料页">hywhy</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/HeArtMe" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/a81205990f88cf5a6f515510a638606e.jpg?alt=HeArtMe&amp;s=20" width="20" /></a>
+				<a href="/accounts/HeArtMe" title="查看{{name}}的个人资料页">HeArtMe</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/bluecoda" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://www.gravatar.com/avatar/cb8a11e615c5abfb49b89f81f825977b.jpg?alt=bluecoda&amp;s=20" width="20" /></a>
+				<a href="/accounts/bluecoda" title="查看{{name}}的个人资料页">bluecoda</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/atu_60692" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/9041eb0f4dad28c7481096c687226756.jpg?alt=atu_60692&amp;s=20" width="20" /></a>
+				<a href="/accounts/atu_60692" title="查看{{name}}的个人资料页">atu_60692</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/sunny" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://2.gravatar.com/avatar/6dfeddd9c8263e4fa53fc377ba0832c7.jpg?alt=sunny&amp;s=20" width="20" /></a>
+				<a href="/accounts/sunny" title="查看{{name}}的个人资料页">sunny</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/sqwang" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://0.gravatar.com/avatar/d6a2d9bfc9048469b9bb297f94441220.jpg?alt=sqwang&amp;s=20" width="20" /></a>
+				<a href="/accounts/sqwang" title="查看{{name}}的个人资料页">sqwang</a>
+			</span>
+		</li>
+		<li>
+			<span class="user_flag">
+				<a href="/accounts/git8023" title="查看{{name}}的个人资料页"><img alt="" height="20" src="http://1.gravatar.com/avatar/99971d50632ba736ad33182e100d1c98.jpg?alt=git8023&amp;s=20" width="20" /></a>
+				<a href="/accounts/git8023" title="查看{{name}}的个人资料页">git8023</a>
+			</span>
+		</li>
+	</ul>
+</div>
+
+				
+			</div>
+		</div>
+	</div>
+	
+	<hr class="hide" />
+<div id="footer">
+	<div class="wrapper">
+		<ul class="footer-menu">
+			<li><a href="/pages/about">关于我们</a></li>
+			<li><a href="/pages/progress">网站历史</a></li>
+			<li><a href="/pages/join">加入我们</a></li>
+			<li><a href="/events">线下活动</a></li>
+			<li><a href="/accounts">用户群体</a></li>
+			<li><a href="/feeds.atom" title="Rss Feed">Rss Feed</a></li>
+		</ul>
+		<br />
+		All rights resolved by <a href="/">Thoughtrails.com</a> 2010
+	</div>
+</div>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-11538454-5']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>

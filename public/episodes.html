@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="Ruby 语言, rails web 框架深入, Ruby on rails编程, Rails Web开发, 企业级应用, Ruby设计模式, Rails开源系统,服务器部署与应用,Ruby on rails问题交流与讨论,Ruby DSL开发,Ruby on rails实践,JavaScript编程,敏捷软件开发XP TDD,数据库,精通linux系统, Thoughtrails中文ruby on rails技术交流与社区" />
+	<meta name="keyword" content="Ruby编程 Rails框架 AJAX技术 Agile敏捷软件开发 ruby on rails实践 Thoughtrails中文ruby on rails技术交流与社区" />
+
+	<title>来自身边的 Ruby on Rails 敏捷开发最佳实践和技巧分享 - Thoughtrails</title>
+
+	<link href="/stylesheets/reset.css?1303661331" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/main.css?1303661331" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/app.css?1303661331" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/syntax.css?1303661331" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/print.css?1303661331" media="print" rel="stylesheet" type="text/css" />
+
+	<script src="/javascripts/jquery.js?1303661331" type="text/javascript"></script>
+<script src="/javascripts/rails.js?1303661331" type="text/javascript"></script>
+<script src="/javascripts/guides.js?1303661331" type="text/javascript"></script>
+	
+	<!--[if IE 6]>
+		<link href="/stylesheets/ie.css?1303661331" media="screen" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<link href="/feeds.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+	
+	<link href="/favicon.ico?1303661270" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	
+	<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="DiZvOK2KqM52ckl7YkuLnjsnRwEBxzpTC4JPIcsZ7rk="/>
+	
+	
+
+</head>
+<body class="guide">
+	
+	<div id="topNav">
+	<div class="wrapper top-nav-text">
+		<strong><a href="/" title="首页">首页</a></strong> |
+		<strong><a href="/pages" title="关于我们">关于我们</a></strong> |
+		<strong><a href="/accounts">用户群体</a></strong> |
+			<strong><a href="/signup" title="注册">注册</a></strong> |
+			<strong><a href="/user_session/new" title="登录">登录</a></strong>
+	</div>
+</div>
+	<div id="header">
+	<div class="wrapper clearfix">
+		<h1><a href="/" title="Return to home page">Guides.rubyonrails.org</a></h1>
+		<p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+		<ul class="nav">
+			<li style="font-size:14px;"><a href="/episodes">敏捷开发最佳实践</a></li>
+			<li style="font-size:14px;"><a href="/gems">GemDigger</a></li>
+			<li style="font-size:14px;"><a href="/questions">问题交流</a></li>
+			<li style="font-size:14px;"><a href="/books">书籍资料</a></li>
+			<li style="font-size:14px;"><a href="/jobs">职位招聘</a></li>
+			<li style="font-size:14px;"><a href="/events">线下活动</a></li>
+			<li style="font-size:14px;"><a href="/articles">圈内资讯</a></li>
+		</ul>
+	</div>
+</div>
+<hr class="hide" />
+	
+		<div id="feature">
+	<div class="wrapper">
+		<h3>Ruby on Rails 敏捷开发最佳实践分享</h3>
+		<p>分享你的敏捷开发最佳实践，为rails社区的枝繁叶茂做出自己的贡献.</p>
+
+		<div id="subCol">
+			<div class="navigator">
+	<a href="/profile/episodes/new" title="分享最佳实践"><img alt="add episode" src="/images/share_hover.gif?1303661331" /></a>
+
+	<a href="/profile/questions/new" title="ask_question"><img alt="add question" src="/images/question_hover.gif?1303661331" /></a>
+	
+	<a href="/profile/gems/new" title="ask_gem"><img alt="add gem" src="/images/add_gem.gif?1303661331" /></a>
+</div>
+
+<div class="navigator category">
+	<h4>按栏目浏览</h4>
+	<dl>
+			<dd><a href="/categories/develop">ruby on rails 开发 (122)</a></dd>
+			<dd><a href="/categories/server">开发环境/服务器部署与优化 (38)</a></dd>
+			<dd><a href="/categories/lib">插件、工具和代码库 (33)</a></dd>
+			<dd><a href="/categories/frontend">前端开发 (8)</a></dd>
+			<dd><a href="/categories/undefined">未分栏目 (4)</a></dd>
+	</dl>
+</div>
+
+<div class="navigator subject">
+	<h4>按内容浏览</h4>
+	<dl>
+		<dd><a href="/episodes">敏捷开发最佳实践 (100篇)</a></dd>
+		<dd><a href="/gems">GemDigger (已digger了15个)</a></dd>
+		<dd><a href="/questions">问题交流 (29个已解决, 76个待解决)</a></dd>
+		<dd><a href="/jobs">职位招聘 (已提供29个职位)</a></dd>
+		<dd><a href="/books">书籍资料 (已经提供19本)</a></dd>
+	</dl>
+</div>
+
+<div class="navigator recommend-books">
+	<h4>推荐书籍</h4>
+	<dl>
+			<a href="/books/19-pragmatic-metaprogramming-ruby-feb-2010"><img alt="Cover_metaprogramming ruby" src="/system/pictures/38/cover_Metaprogramming Ruby.png?1303205287" /></a>
+			<p class="promote"><a href="/books/19-pragmatic-metaprogramming-ruby-feb-2010">Metaprogramming Ruby</a></p>
+	</dl>
+</div>
+
+<div class="navigator tags">
+	<h4>热门标签浏览</h4>
+	<ul class="tags">
+			<li><span class="user_flag"><a href="/tags/rails3">rails3</a></span></li>
+			<li><span class="user_flag"><a href="/tags/plugin">plugin</a></span></li>
+			<li><span class="user_flag"><a href="/tags/rails">rails</a></span></li>
+			<li><span class="user_flag"><a href="/tags/environment">environment</a></span></li>
+			<li><span class="user_flag"><a href="/tags/model">model</a></span></li>
+			<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+			<li><span class="user_flag"><a href="/tags/design%20pattern">design pattern</a></span></li>
+			<li><span class="user_flag"><a href="/tags/tools">tools</a></span></li>
+			<li><span class="user_flag"><a href="/tags/linux">linux</a></span></li>
+			<li><span class="user_flag"><a href="/tags/ruby">ruby</a></span></li>
+	</ul>
+</div>
+
+<div class="navigator ad">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5025976052035215";
+/* home sidebar */
+google_ad_slot = "7848873254";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+		</div>
+
+	</div>
+</div>
+
+
+	
+	<div id="container">
+		<div class="wrapper">
+			<div id="mainCol">
+
+				
+				
+<div class="bookmarks">
+	<ul class="navigation">
+		<li class="active"><a href="/episodes?search[meta_sort]=created_at.asc" class="sort_link">按分享时间浏览</a></li>
+		<li><a href="/episodes?search[meta_sort]=view_count.asc" class="sort_link">按浏览次数浏览</a></li>
+	</ul>
+</div>
+<div class="section">
+	<ul class="list">
+	<li class="clearfix episode_120">
+		<a href="/accounts/vkill" class="mini_profile_icon"><img alt="" height="30" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg?alt=vkill&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/120-/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/120-" class="subject">rails seed 中使用 paperclip 保存图片 </a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/vkill" class="creator_name">vkill</a>
+					分享于 16 天 前,
+					<a href="/episodes/120-#comments">2 条回复</a>, 
+					<span>136 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/paperclip">paperclip</a></span></li>
+				</ul>
+				<p>rails seed 中使用 paperclip 保存图片 </p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_119">
+		<a href="/accounts/vkill" class="mini_profile_icon"><img alt="" height="30" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg?alt=vkill&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/119-/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/119-" class="subject">rake auto generate i18n.zh-CN.activerecord </a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/vkill" class="creator_name">vkill</a>
+					分享于 16 天 前,
+					<a href="/episodes/119-#comments">0 条回复</a>, 
+					<span>92 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/rake%20activerecord">rake activerecord</a></span></li>
+				</ul>
+				<p>rails中自动生成 config/locales/zh-CN.model.yml</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_118">
+		<a href="/accounts/kewin" class="mini_profile_icon"><img alt="" height="30" src="http://0.gravatar.com/avatar/982c2af3279a52b77385c8615662630b.jpg?alt=kewin&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/118-/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/118-" class="subject">RVM下遇到的openssl的问题解决分享</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/kewin" class="creator_name">kewin</a>
+					分享于 18 天 前,
+					<a href="/episodes/118-#comments">0 条回复</a>, 
+					<span>99 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/rvm">rvm</a></span></li>
+					<li><span class="user_flag"><a href="/tags/openssl">openssl</a></span></li>
+				</ul>
+				<p>RVM下遇到的openssl的问题解决分享</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_117">
+		<a href="/accounts/jerry" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6746ab5a9b678fe35b7dab847b24cbea.jpg?alt=jerry&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/117-install-rails3-dot-1-rc-with-rvm/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/117-install-rails3-dot-1-rc-with-rvm" class="subject">install rails 3.1 rc with RVM</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/jerry" class="creator_name">jerry</a>
+					分享于 29 天 前,
+					<a href="/episodes/117-install-rails3-dot-1-rc-with-rvm#comments">0 条回复</a>, 
+					<span>282 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/rails">rails</a></span></li>
+				</ul>
+				<p>rails3.1rc 已经于几日前放出，我们来安装体验一下rails3.1rc.</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_116">
+		<a href="/accounts/vkill" class="mini_profile_icon"><img alt="" height="30" src="http://0.gravatar.com/avatar/6a3b78e05f20472aafc29aad3c4a6b4d.jpg?alt=vkill&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/116-/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/116-" class="subject">rails rake 获取所有model类名 </a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/vkill" class="creator_name">vkill</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/116-#comments">0 条回复</a>, 
+					<span>195 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/rake">rake</a></span></li>
+				</ul>
+				<p>rails rake 获取所有model类名 </p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_115">
+		<a href="/accounts/yuren" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg?alt=yuren&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/115-memcached-Depth-analytical-04/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/115-memcached-Depth-analytical-04" class="subject">memcached 深度解析（四）</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/yuren" class="creator_name">yuren</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/115-memcached-Depth-analytical-04#comments">0 条回复</a>, 
+					<span>186 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+				</ul>
+				<p>正如第1次中介绍的那样， memcached虽然称为“分布式”缓存服务器，但服务器端并没有“分布式”功能。服务器端仅包括 第2次、 第3次 前坂介绍的内存存储功能，其实现非常简单。至于memcached的分布式，则是完全由客户端程序库实现的。这种分布式是memcached的最大特点。</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_114">
+		<a href="/accounts/yuren" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg?alt=yuren&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/114-memcached-Depth-analytical-03/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/114-memcached-Depth-analytical-03" class="subject">memcached 深度解析（三）</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/yuren" class="creator_name">yuren</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/114-memcached-Depth-analytical-03#comments">0 条回复</a>, 
+					<span>185 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+				</ul>
+				<p>memcached是缓存，所以数据不会永久保存在服务器上，这是向系统中引入memcached的前提。本次介绍memcached的数据删除机制.</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_113">
+		<a href="/accounts/jerry" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6746ab5a9b678fe35b7dab847b24cbea.jpg?alt=jerry&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/113-quickstart-guide-to-using-compass-haml-sass-scss-with-rails3/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>1 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/113-quickstart-guide-to-using-compass-haml-sass-scss-with-rails3" class="subject">Quickstart Guide to Using Compass, Haml, SASS, SCSS with Rails 3</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/jerry" class="creator_name">jerry</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/113-quickstart-guide-to-using-compass-haml-sass-scss-with-rails3#comments">2 条回复</a>, 
+					<span>325 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/rails3">rails3</a></span></li>
+					<li><span class="user_flag"><a href="/tags/plugin">plugin</a></span></li>
+				</ul>
+				<p>我经常性的在rails3项目中使用 Compass, Haml, SASS, 和 SCSS， 我觉得写一篇关于配置这些gem的指南非常有必要。此指南可以让你对Compass, Haml, SASS, 和 SCSS 有一个基本的了解。</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_112">
+		<a href="/accounts/yuren" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg?alt=yuren&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/112-memcached-Depth-analytical-02/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/112-memcached-Depth-analytical-02" class="subject">memcached 深度解析（二）</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/yuren" class="creator_name">yuren</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/112-memcached-Depth-analytical-02#comments">0 条回复</a>, 
+					<span>176 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+				</ul>
+				<p>上次的文章介绍了memcached是分布式的高速缓存服务器。本次将介绍memcached的内部构造的实现方式，以及内存的管理方式。另外，memcached的内部构造导致的弱点也将加以说明。</p>
+			</div>
+		</div>
+	</li>
+	<li class="clearfix episode_111">
+		<a href="/accounts/yuren" class="mini_profile_icon"><img alt="" height="30" src="http://www.gravatar.com/avatar/6aaf2a95cff2e01c2bb64b74115003c7.jpg?alt=yuren&amp;s=30" width="30" /></a>
+
+		<div class="me_too">
+			<div class="inset">
+				<div class="me_too_action active">
+					<a href="/episodes/111-memcached-Depth-analytical-01/votes/confirm?type=episode" class="me_too_link" data-method="put" rel="nofollow" title="给这篇实践投票"><img alt="*" class="star" src="/images/sprite_screen.png?1303661331" /><strong>0 次投票</strong></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="topic_details">
+			<a href="/episodes/111-memcached-Depth-analytical-01" class="subject">memcached 深度解析（一）</a>
+			<div class="meta">
+				<div>
+					<a href="/accounts/yuren" class="creator_name">yuren</a>
+					分享于 大约一个月 前,
+					<a href="/episodes/111-memcached-Depth-analytical-01#comments">1 条回复</a>, 
+					<span>217 次浏览</span>
+				</div>
+			</div>
+			<div>
+				<ul class="tags">
+					<li><span class="user_flag"><a href="/tags/memcached">memcached</a></span></li>
+				</ul>
+				<p>memcached 是以LiveJournal 旗下Danga Interactive 公司的Brad Fitzpatric 为首开发的一款软件。现在已成为 mixi、 hatena、 Facebook、 Vox、LiveJournal等众多服务中提高Web应用扩展性的重要因素。</p>
+			</div>
+		</div>
+	</li>
+</ul>
+<div class="pagination"><span class="previous_page disabled">上一页</span> <em>1</em> <a rel="next" href="/episodes?page=2">2</a> <a href="/episodes?page=3">3</a> <a href="/episodes?page=4">4</a> <a href="/episodes?page=5">5</a> <a href="/episodes?page=6">6</a> <a href="/episodes?page=7">7</a> <a href="/episodes?page=8">8</a> <a href="/episodes?page=9">9</a> <a href="/episodes?page=10">10</a> <a class="next_page" rel="next" href="/episodes?page=2">下一页</a></div>
+
+	<div class="clearfix"></div>
+</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<hr class="hide" />
+<div id="footer">
+	<div class="wrapper">
+		<ul class="footer-menu">
+			<li><a href="/pages/about">关于我们</a></li>
+			<li><a href="/pages/progress">网站历史</a></li>
+			<li><a href="/pages/join">加入我们</a></li>
+			<li><a href="/events">线下活动</a></li>
+			<li><a href="/accounts">用户群体</a></li>
+			<li><a href="/feeds.atom" title="Rss Feed">Rss Feed</a></li>
+		</ul>
+		<br />
+		All rights resolved by <a href="/">Thoughtrails.com</a> 2010
+	</div>
+</div>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-11538454-5']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>
+</html>

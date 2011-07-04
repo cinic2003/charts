@@ -1,0 +1,1251 @@
+#mainCol h2 {
+	margin-left:10px;
+	clear:left;
+	color:#000000;
+	font-size:22px;
+	margin:0;
+	padding:20px 0 0;
+}
+#mainCol h2 span.kicker {
+	color:#000000;
+	display:block;
+	font-size:12px;
+	line-height:20px;
+}
+
+#mainCol ul.latest {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:720px;
+}
+
+
+#mainCol ul.latest li {
+	float:left;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+#mainCol ul.latest li a.link {
+	-moz-border-radius:5px 5px 5px 5px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #EFEFEF;
+	display:block;
+	height:85px;
+	margin:10px;
+	padding:10px;
+	position:relative;
+	text-decoration:none;
+	width:198px;
+}
+
+#mainCol ul.articles {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:720px;
+}
+
+#mainCol ul.articles li {
+	float:left;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+
+#mainCol ul.articles li {
+	-moz-border-radius:5px 5px 5px 5px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #EFEFEF;
+	display:block;
+	height:170px;
+	margin:10px;
+	padding:10px;
+	position:relative;
+	text-decoration:none;
+	width:318px;
+}
+
+#mainCol ul.articles li a {
+	color:#1985BE;
+	display:block;
+	margin-bottom: 5px;
+}
+
+#mainCol ul.articles li a:hover {
+	color:#666666;
+}
+
+#mainCol a:link {
+	color:#1985BE;
+}
+#mainCol ul.latest li a.link span.title {
+	display:block;
+	max-height:38px;
+	overflow:hidden;
+}
+#mainCol ul.latest li a.link span.title span {
+	border-bottom:1px dotted #EFEFEF;
+	color:#1985BE;
+	font-size:14px;
+	line-height:20px;
+	padding-top:4px;
+	text-decoration:none;
+}
+#mainCol ul.latest li a.link span.details {
+	clear:both;
+	color:#666666;
+	display:block;
+	font-size:12px;
+}
+#mainCol ul.latest li div.contributor {
+	-moz-border-radius:5px 5px 5px 5px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #DDDDDD;
+	bottom:20px;
+	display:block;
+	right:20px;
+	padding:2px;
+	position:absolute;
+}
+
+#mainCol ul.latest li div.tags {
+	-moz-border-radius:5px 5px 5px 5px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #DDDDDD;
+	bottom:20px;
+	display:block;
+	left:20px;
+	padding:2px;
+	position:absolute;
+}
+
+#mainCol ul.latest li div.tags .tag_flag {
+	background:none repeat scroll 0 0 #EEEEEE;
+	-moz-border-radius:3px 3px 3px 3px;
+	float:left;
+	margin-right: 2px;
+}
+
+#mainCol ul.latest li div.tags .tag_flag a {
+	color:#666666;
+	display:block;
+	float:left;
+	font-size:12px;
+	line-height:20px;
+	padding-right:6px;
+	text-decoration:none;
+	height: 20px;
+	margin-left: 6px;
+}
+
+#mainCol ul.latest li div.tags .tag_flag:hover a {
+	color:#FFFFFF;
+}
+
+#mainCol ul.latest li div.tags .tag_flag:hover { background: #1985BE; }
+
+#mainCol ul.latest li div.contributor .user_flag {
+	background:none repeat scroll 0 0 #EEEEEE;
+	-moz-border-radius:3px 3px 3px 3px;
+	float:left;
+}
+
+#mainCol ul.latest li div.contributor .user_flag a {
+	color:#666666;
+	display:block;
+	float:left;
+	font-size:12px;
+	line-height:20px;
+	padding-right:6px;
+	text-decoration:none;
+	height: 20px;
+}
+
+#mainCol ul.latest li div.contributor .user_flag:hover a {
+	color:#FFFFFF;
+}
+
+#mainCol ul.latest li div.contributor .user_flag:hover { background: #1985BE; }
+
+
+#mainCol ul.latest li div.tags .tag_flag:hover { background: #1985BE; }
+
+
+
+#mainCol ul.betatesters {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 10px 10px 0 10px;
+	list-style-type: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#mainCol ul.betatesters li {
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	padding: 2px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	float: left;
+}
+#mainCol ul.betatesters li .user_flag {
+	float: left;
+	background: #1985be;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#mainCol ul.betatesters li .user_flag:hover { background: #00528b; }
+#mainCol ul.betatesters li .user_flag a {
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	padding-right: 6px;
+	color: #ffffff;
+	text-decoration: none;
+	height:20px;
+}
+
+#mainCol ul.betatesters li .gem_flag {
+	float: left;
+	background: #1985be;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#mainCol ul.betatesters li .gem_flag:hover { background: #00528b; }
+
+#mainCol ul.betatesters li .gem_flag a {
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	padding-right: 6px;
+	margin-left: 6px;
+	color: #ffffff;
+	text-decoration: none;
+	height:20px;
+}
+
+
+#subCol ul.tags {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 10px 10px 0 10px;
+	list-style-type: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#subCol ul.tags li {
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	padding: 2px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	float: left;
+}
+#subCol ul.tags li .user_flag {
+	float: left;
+	background: #1985be;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#subCol ul.tags li .user_flag:hover { background: #00528b; }
+#subCol ul.tags li .user_flag a {
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	padding-right: 6px;
+	color: #ffffff;
+	text-decoration: none;
+	height:20px;
+	margin-left:5px;
+}
+
+#mainCol .section ul.tags {
+	display: inline-block;
+	margin: 0;
+	padding: 3px;
+	list-style-type: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#mainCol .section ul.tags li {
+	background: #ffffff;
+	border: 1px solid #dddddd;
+	padding: 2px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: inline-block;
+	margin: 0 5px 5px 0;
+	float: left;
+}
+#mainCol .section ul.tags li .user_flag {
+	float: left;
+	background: #1985be;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#mainCol .section ul.tags li .user_flag:hover { background: #00528b; }
+#mainCol .section ul.tags li .user_flag a {
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+	padding-right: 6px;
+	color: #ffffff;
+	text-decoration: none;
+	height:20px;
+	margin-left:5px;
+}
+
+#subCol .subject {
+	clear: both;
+	padding: 1px;
+}
+
+#mainCol .section .usernav {
+	float: left;
+}
+
+
+
+.fieldgroup .fields {
+	background:url("../images/fieldgroup_back.png") no-repeat scroll 0 0 transparent;
+	margin:10px 0 0;
+	padding:10px;
+}
+.fieldgroup dl.form:first-child {
+	margin-top:0;
+}
+dl.form {
+	margin:15px 0;
+}
+dl.form dt {
+	color:#333333;
+	font-size:14px;
+	font-weight:bold;
+	margin:0;
+}
+dl.form dd input[type="text"], dl.form dd input[type="password"] {
+	background-position:right center;
+	background-repeat:no-repeat;
+	color:#666666;
+	font-size:14px;
+	margin-right:5px;
+	padding:5px;
+	width:500px;
+}
+input[type="text"], input[type="password"], input[type="image"], textarea {
+	font:99% helvetica,arial,freesans,sans-serif;
+}
+
+dl.form dd p.notice {
+	color:#666666;
+	font-size:11px;
+	margin:2px 0 5px;
+}
+
+.form-warning {
+	background:none repeat scroll 0 0 #FFFFE2;
+	border-color:#DDDDDD -moz-use-text-color;
+	border-style:solid none;
+	border-width:1px medium;
+	color:#333333;
+	font-size:14px;
+	margin:10px 0;
+	padding:8px 5px;
+}
+
+.form-actions {
+	margin-bottom:15px;
+	padding-bottom:2px;
+}
+
+input.classy {
+	-moz-border-radius:4px 4px 4px 4px;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+	background:-moz-linear-gradient(-90deg, #FFFFFF, #E1E1E1) repeat scroll 0 0 transparent;
+	border-color:-moz-use-text-color -moz-use-text-color #EBEBEB;
+	border-style:none none solid;
+	border-width:medium medium 1px;
+	color:#333333;
+	cursor:pointer;
+	font-family:helvetica,arial,freesans,clean,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	height:34px;
+	margin-left:10px;
+	overflow:visible;
+	padding:0;
+	position:relative;
+	text-shadow:1px 1px 0 #FFFFFF;
+	top:1px;
+	white-space:nowrap;
+}
+input.classy.silver:hover {
+	-moz-box-shadow:0 1px 4px rgba(255, 255, 255, 0.3);
+	background:-moz-linear-gradient(-90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	border-bottom-color:#F7F7F7;
+	color:#000000;
+	text-shadow:1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.signup-button {
+	-moz-border-radius:4px 4px 4px 4px;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+	background:-moz-linear-gradient(-90deg, #66C7E5, #328FC9) repeat scroll 0 0 transparent;
+	text-decoration:none;
+	border:1px solid #51A0B3;
+	color:#BED7E1;
+	display:inline-block;
+	font-size:12px;
+	padding:15px 30px;
+	text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+a.signup-button:hover {
+	background:-moz-linear-gradient(-90deg, #66C7E5, #328FC9) repeat scroll 0 0 transparent;
+	text-decoration:none;
+}
+.signup-button strong {
+	color:#FFFFFF;
+	display:block;
+	font-size:20px;
+}
+.signup-button em {
+	color:#C8ECFF;
+	font-style:normal;
+	font-weight:bold;
+}
+
+/* Formtamastic styles*/
+
+form.formtastic {
+	margin:0;
+	padding:0;
+}
+form.formtastic ul, form.formtastic ol, form.formtastic li, form.formtastic fieldset, form.formtastic legend, form.formtastic input, form.formtastic textarea, form.formtastic select, form.formtastic p {
+	margin:0;
+	padding:0;
+}
+form.formtastic fieldset {
+	border:0 none;
+}
+form.formtastic em, form.formtastic strong {
+	font-style:normal;
+	font-weight:normal;
+}
+form.formtastic ol, form.formtastic ul {
+	list-style:none outside none;
+}
+form.formtastic abbr, form.formtastic acronym {
+	border:0 none;
+	font-variant:normal;
+}
+form.formtastic input, form.formtastic textarea, form.formtastic select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+form.formtastic input, form.formtastic textarea, form.formtastic select {
+	font-size:100%;
+}
+form.formtastic legend {
+	color:#000000;
+	white-space:normal;
+}
+form.formtastic ul.errors {
+	color:#CC0000;
+	list-style:square outside none;
+	margin:0.5em 0 1.5em 25%;
+}
+form.formtastic ul.errors li {
+	border:medium none;
+	display:list-item;
+	padding:0;
+}
+form.formtastic fieldset {
+	display:inline-block;
+}
+form.formtastic fieldset.buttons {
+	padding-left:25%;
+}
+form.formtastic fieldset.buttons li {
+	float:left;
+	padding-right:0.5em;
+}
+form.formtastic fieldset:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+html[xmlns] form.formtastic fieldset {
+	display:block;
+}
+* html form.formtastic fieldset {
+	height:1%;
+}
+form.formtastic fieldset > ol > li {
+	display:inline-block;
+	margin-bottom:1.5em;
+}
+form.formtastic fieldset > ol > li:after {
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+html[xmlns] form.formtastic fieldset > ol > li {
+	display:block;
+}
+* html form.formtastic fieldset > ol > li {
+	height:1%;
+}
+form.formtastic fieldset > ol > li label {
+	display:block;
+	float:left;
+	padding-top:0.2em;
+	width:25%;
+}
+form.formtastic fieldset > ol > li > li label {
+	line-height:100%;
+	padding-top:0;
+}
+form.formtastic fieldset > ol > li > li label input {
+	line-height:100%;
+	margin-top:-0.1em;
+	vertical-align:middle;
+}
+form.formtastic fieldset > ol > li fieldset {
+	position:relative;
+}
+form.formtastic fieldset > ol > li fieldset legend {
+	left:0;
+	padding-top:0.1em;
+	position:absolute;
+	width:95%;
+}
+form.formtastic fieldset > ol > li fieldset legend span, form.formtastic fieldset > ol > li fieldset legend.label label {
+	position:absolute;
+}
+form.formtastic fieldset > ol > li fieldset ol {
+	float:left;
+	margin:0;
+	padding:0 0 0 25%;
+	width:74%;
+}
+form.formtastic fieldset > ol > li fieldset ol li {
+	border:0 none;
+	padding:0;
+}
+form.formtastic fieldset > ol > li p.inline-hints {
+	color:#666666;
+	margin:0.5em 0 0 25%;
+}
+form.formtastic fieldset > ol > li p.inline-errors {
+	color:#CC0000;
+	margin:0.5em 0 0 25%;
+}
+form.formtastic fieldset > ol > li ul.errors {
+	color:#CC0000;
+	list-style:square outside none;
+	margin:0.5em 0 0 25%;
+}
+form.formtastic fieldset > ol > li ul.errors li {
+	border:medium none;
+	display:list-item;
+	padding:0;
+}
+form.formtastic fieldset > ol > li.string input {
+/*	max-width:74%;*/
+	width: 50%;
+}
+form.formtastic fieldset > ol > li.password input {
+/*	max-width:13em;*/
+	width: 50%;
+}
+form.formtastic fieldset > ol > li.email input {
+/*	max-width:13em;*/
+	width: 50%;
+}
+form.formtastic fieldset > ol > li.numeric input {
+/*	max-width:74%;*/
+	width: 50%;
+}
+form.formtastic fieldset > ol > li.text textarea {
+/*	width:74%;*/
+	width: 50%;
+}
+form.formtastic fieldset ol li.hidden {
+	display:none;
+}
+html[xmlns] form.formtastic fieldset ol li.hidden {
+	display:none;
+}
+form.formtastic fieldset > ol > li.boolean label {
+	padding-left:25%;
+	width:auto;
+}
+form.formtastic fieldset > ol > li.boolean label input {
+	margin:0 0.5em 0 0.2em;
+}
+form.formtastic fieldset > ol > li.radio fieldset ol, form.formtastic fieldset > ol > li.check_boxes fieldset ol {
+	margin-bottom:-0.6em;
+}
+form.formtastic fieldset > ol > li.radio fieldset ol li, form.formtastic fieldset > ol > li.check_boxes fieldset ol li {
+	margin:0.1em 0 0.5em;
+}
+form.formtastic fieldset > ol > li.radio fieldset ol li label, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
+	float:none;
+	width:100%;
+}
+form.formtastic fieldset > ol > li.radio fieldset ol li label input, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label input {
+	margin-right:0.2em;
+}
+form.formtastic fieldset > ol > li.date fieldset ol li, form.formtastic fieldset > ol > li.time fieldset ol li, form.formtastic fieldset > ol > li.datetime fieldset ol li {
+	float:left;
+	margin:0 0.3em 0 0;
+	width:auto;
+}
+form.formtastic fieldset > ol > li.date fieldset ol li label, form.formtastic fieldset > ol > li.time fieldset ol li label, form.formtastic fieldset > ol > li.datetime fieldset ol li label {
+	display:none;
+}
+form.formtastic fieldset > ol > li.date fieldset ol li label input, form.formtastic fieldset > ol > li.time fieldset ol li label input, form.formtastic fieldset > ol > li.datetime fieldset ol li label input {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+form.formtastic legend {
+	font-size:20px;
+	padding-bottom:20px;
+}
+form.formtastic fieldset {
+	width:100%;
+}
+form.formtastic fieldset.inputs > ol > li {
+	display:block;
+}
+form.formtastic fieldset.inputs > ol > li.password input {
+	max-width:74%;
+}
+form.formtastic fieldset.inputs > ol > li.boolean label {
+	padding-left:0;
+}
+form.formtastic fieldset.inputs > ol > li label {
+	font-weight:bold;
+	width:100%;
+}
+form.formtastic fieldset.inputs > ol > li textarea {
+	width:100%;
+}
+form.formtastic fieldset.inputs > ol > li p.inline-hints, form.formtastic fieldset.inputs > ol > li p.inline-errors {
+	margin:8px 0 0;
+}
+form.formtastic fieldset.buttons {
+	display:block;
+	padding:0;
+}
+form.formtastic fieldset.buttons input {
+	padding:3px 9px;
+}
+form.formtastic fieldset.buttons a {
+	font-size:1.2em;
+	line-height:2em;
+	margin-left:2em;
+}
+form#new_comment, form#new_answer {
+	margin:5px 0;
+}
+form#new_comment fieldset, form#new_answer fieldset {
+	width:100%;
+}
+form#new_comment fieldset ol li, form#new_answer fieldset ol li {
+	margin-bottom:0;
+	width:100%;
+}
+form.post, form.implementation, form.question, form.answer, form.formtastic.user_session, form.formtastic.user {
+	margin:32px 20px;
+}
+form.post li.text, form.implementation li.text, form.comment li.text, form.question li.text, form.answer li.text {
+	width:100%;
+}
+form.post textarea, form.implementation textarea, form.comment textarea, form.question textarea, form.answer textarea {
+/*	height:200px;*/
+}
+form.post #post_description {
+	height:50px;
+}
+form.formtastic .wikistyle {
+	border:1px dotted #111111;
+	margin:1em 0;
+	min-height:2em;
+}
+form.formtastic .wikistyle strong {
+	font-weight:bold;
+}
+form.formtastic .wikistyle em {
+	font-style:italic;
+}
+form.formtastic .wikistyle h1 {
+	font-size:170%;
+	font-weight:bold;
+	margin:15px 0;
+}
+form.formtastic .wikistyle h2 {
+	font-size:150%;
+	font-weight:bold;
+	margin:15px 0;
+}
+form.formtastic .wikistyle h3 {
+	font-size:120%;
+	font-weight:bold;
+	margin:15px 0;
+}
+form.formtastic .wikistyle p {
+	line-height:1.5em;
+	margin-bottom:0.5em;
+}
+form.formtastic .wikistyle ol {
+	list-style-type:decimal;
+}
+form.formtastic .wikistyle ul {
+	list-style-type:disc;
+}
+form.formtastic .wikistyle ol, form.formtastic .wikistyle ul {
+	margin:0 1.5em 0.5em 0;
+	padding-left:3.333em;
+}
+form.formtastic .wikistyle ul ul, form.formtastic .wikistyle ul ol, form.formtastic .wikistyle ol ol, form.formtastic .wikistyle ol ul {
+	margin-bottom:0;
+	margin-top:0;
+}
+form.formtastic .wikistyle blockquote {
+	border-left:5px solid #DDDDDD;
+	color:#555555;
+	margin-bottom:0.5em;
+	padding-left:0.5em;
+}
+pre {
+	background-color:#F8F8FF;
+	border:1px solid #DEDEDE;
+	color:#444444;
+	font-size:90%;
+	line-height:1.5em;
+	margin:0 0 0.5em;
+	overflow:auto;
+	padding:0.5em;
+}
+pre code {
+	background-color:#F8F8FF;
+	border:medium none;
+	font-size:100%;
+	padding:0;
+}
+code {
+	font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace;
+	background-color:#F8F8FF;
+	border:1px solid #DEDEDE;
+	color:#444444;
+	font-size:90%;
+}
+form.formtastic .wmd-notice {
+	background-color:#FFFFCC;
+	margin:10px 0;
+	padding:10px;
+}
+
+.wikistyle {
+	margin-top:10px;
+	margin-bottom:20px;
+}
+
+img.user-avatar {
+	border:1px solid #D0D0D0;
+	/*	margin-right:10px;*/
+	padding:2px;
+}
+
+#mainCol ol{
+	list-style-position: inside;
+}
+
+.addthis_toolbox {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.bookmarks {
+	border-bottom:1px solid #C0C0C0;
+	height:34px;
+	margin:10px 0 30px;
+	position:relative;
+}
+
+.bookmarks .navigation li.rightnav {
+	float: right;
+}
+.bookmarks ul {
+	height:100%;
+	left:10px;
+	position:absolute;
+	top:1px;
+	width: 53em;
+	list-style:none outside none;
+}
+
+.bookmarks ul li span {
+  cursor: pointer;
+}
+
+.bookmarks li {
+	float:left;
+	margin:0 5px;
+	list-style:none outside none;
+	padding: 0;
+}
+
+.bookmarks li.active {
+	float:left;
+	margin:0 5px;
+	list-style:none outside none;
+	padding: 0;
+	background:url("../images/bg-bookmark.gif") repeat-x scroll 0 0 transparent;
+	border-color:#C4CED6 #C4CED6 #FFFFFF;
+	border-style:solid;
+	border-width:1px;
+	color:#0063A8;
+	height:24px;
+	line-height:19px;
+	padding:8px 6px 0;
+}
+
+/*.bookmarks li.active a, .bookmarks li a.active {
+background:url("../images/bg-bookmark.gif") repeat-x scroll 0 0 transparent;
+border-color:#C4CED6 #C4CED6 #FFFFFF;
+border-style:solid;
+border-width:1px;
+color:#0063A8;
+height:24px;
+line-height:19px;
+padding:8px 14px 0;
+}*/
+
+.bookmarks li {
+	background:url("../images/bg-bookmark-disable.gif") repeat-x scroll 0 0 transparent;
+	color:#434141;
+	display:block;
+	float:left;
+	font-weight:bold;
+	height:25px;
+	line-height:20px;
+	outline-style:none;
+/*	padding:8px 15px 0;w*/
+	padding: 8px 7px 0;
+	position:relative;
+	text-decoration:none;
+}
+
+div.panel {
+	height:auto;
+	padding:0;
+	width: 680px;
+	margin-left:25px;
+}
+
+.pagination {
+	display:inline;
+	float:right;
+	margin-top:25px;
+}
+
+.pagination .disabled {
+	display:none;
+}
+
+.pagination em {
+	color:#928E8F;
+	padding:0 5px;
+}
+
+.pagination a {
+	-moz-box-shadow:1px 1px 5px 0 #AEAEAE;
+	border:1px solid #EBEBEB;
+	line-height:30px;
+	margin:0 2px;
+	padding:5px 10px;
+	text-align:center;
+}
+
+
+.colorize pre code {
+	margin: 0px;
+	padding: 0px;
+}
+.colorize pre .an {
+	color: #e7be69;
+}
+.colorize pre .c {
+	color: #bc9358;
+	font-style: italic;
+}
+.colorize pre .ch {
+	color: #509e4f;
+}
+.colorize pre .cl, .colorize pre .co {
+	color: yellow;
+}
+.colorize pre .fl {
+	color: #a4c260;
+}
+.colorize pre .fu {
+	color: #ffc56d;
+}
+.colorize pre .gv {
+	color: #d0cffe;
+}
+.colorize pre .i {
+	color: #d0fc55;
+}
+.colorize pre .il {
+	background: #151515;
+}
+.colorize pre .iv {
+	color: #d0cffe;
+}
+.colorize pre .pp {
+	color: #e7be69;
+}
+.colorize pre .r {
+	color: orange;
+}
+.colorize pre .rx, .colorize pre .s {
+	color: #68fb35;
+}
+.colorize pre .sy {
+	color: #3ba8a8;
+}
+.colorize pre .ta {
+	color: #e7be69;
+}
+.colorize pre .pc {
+	color: #6c9cbd;
+}
+
+
+
+
+ul.list li {
+	background:url("../images/topic_list_dotted_border.png") repeat-x scroll 0 100% transparent;
+	padding:10px 0;
+}
+
+ul.list li .topic_details .meta, #mainCol .entry .topic_details .meta  {
+	color:#777777;
+	padding-top:4px;
+}
+
+ul.list li .topic_details, #mainCol .entry .topic_details {
+	margin-left:50px;
+	margin-right:60px;
+}
+
+ul.list li .topic_details .subject, #mainCol .entry .topic_details .subject  {
+	font-size:1.2em;
+	font-weight:bold;
+	margin-right:3px;
+	text-decoration:none;
+}
+
+.mini_profile_icon {
+	border:1px solid #D0D0D0;
+	display:block;
+	float:left;
+	padding:1px;
+	position:relative;
+	z-index:5;
+}
+
+ul.list li .mini_profile_icon, #mainCol .entry .mini_profile_icon {
+	color:#FFFFFF;
+	float:left;
+	height:30px;
+	overflow:hidden;
+	width:30px;
+}
+
+
+
+.mini_profile_icon img {
+	overflow:hidden;
+}
+
+ul.list li .me_too, #mainCol .entry .me_too {
+	-moz-border-radius:4px 4px 4px 4px;
+	background:none repeat scroll 0 0 #E2E2E2;
+	border:2px solid #E2E2E2;
+	float:right;
+	position:relative;
+	z-index:10;
+	margin-left: 10px;
+}
+
+ul.list li .me_too .inset, #mainCol .entry .me_too .inset {
+	-moz-border-radius:3px 3px 3px 3px;
+	background:url("../images/white_pixel.png") repeat-x scroll 0 0 #F8F8F8;
+	border:1px solid #C2C2C2;
+	padding:6px;
+}
+
+ul.list li .me_too .me_too_action a:hover img, #mainCol .entry .me_too .me_too_action a:hover img {
+	background-position:-13px 0;
+}
+
+
+ul.list li .me_too .me_too_action, #mainCol .entry .me_too .me_too_action {
+	color:#333333;
+	display:inline;
+	padding:5px 0;
+	position:relative;
+}
+
+ul.list li .me_too .me_too_action a, #mainCol .entry .me_too .me_too_action a {
+	color:inherit !important;
+	padding:5px 0;
+	position:relative;
+	text-decoration:none;
+	z-index:11;
+}
+
+ul.list li .me_too .me_too_action img.star, #mainCol .entry .me_too .me_too_action img.star {
+	background:url("../images/topic_star.png") no-repeat scroll 0 0 transparent;
+	height:13px;
+	margin-right:2px;
+	vertical-align:top;
+	width:13px;
+}
+
+#mainCol .todo_head {
+	background-color:#E2F4F8;
+	background-image:url("../images/feedback_tab_question.png");
+	border-bottom:1px solid #D4EDF3;
+	border-top:1px solid #BEE7F0;
+	background-position:20px 50%;
+	background-repeat:no-repeat;
+	margin:0 -8px 5px;
+	padding:8px 20px;
+}
+#mainCol .todo_head h5 {
+	padding: 0 0 0 26px !important;
+}
+
+#mainCol .resolved_head {
+	background-color:#FDF1CE;
+	background-image:url("../images/feedback_tab_idea.png");
+	border-bottom:1px solid #F6E9C4;
+	border-top:1px solid #F4E1A8;
+	background-position:20px 50%;
+	background-repeat:no-repeat;
+	margin:0 -8px 5px;
+	padding:8px 20px;
+}
+
+#mainCol .resolved_head h5 {
+	padding: 0 0 0 26px !important;
+}
+
+
+#mainCol .comment_link {
+	cursor: pointer;
+}
+
+#mainCol .cancel_link {
+	cursor: pointer;
+}
+
+#mainCol .comment_form_container {
+	width: 500px;
+}
+
+
+#mainCol .comment_link img {
+	background:url("../images/topic_sprites.png") no-repeat scroll -28px -37px transparent;
+	height:14px;
+	margin-right:2px;
+	width:14px;
+}
+
+#mainCol .promotion_link img {
+	background:url("../images/topic_sprites.png") no-repeat scroll -42px -37px transparent;
+	height:14px;
+	margin-right:2px;
+	width:14px;
+}
+
+#mainCol #index {
+	float:left;
+	margin:0 40px 60px;
+	width:700px;
+}
+#mainCol #index li {
+	list-style:none outside none;
+	margin-bottom:0.834em;
+	position:relative;
+	float:left;
+	height:270px;
+	list-style:none outside none;
+	margin:0 0 10px 10px;
+	width:176px;
+}
+#mainCol #index li.book .book-wrapper {
+	-moz-border-radius:5px 5px 5px 5px;
+	background-image:-moz-linear-gradient(100% 100% 90deg, #EEEEEE, #F7F7F7);
+	float:left;
+	height:270px;
+	overflow:hidden;
+	width:176px;
+}
+#mainCol #index li.book .cover {
+	-moz-border-radius:3px 3px 3px 3px;
+	background:none repeat scroll 0 0 #DDDDDD;
+	margin:10px 10px 5px;
+	text-align:center;
+	width:156px;
+	float:right;
+}
+#mainCol #index li p {
+	margin-bottom:0;
+	margin-top:0;
+	margin-left:0;
+}
+#mainCol #index li.book .details {
+	height:auto;
+	margin-right:0 !important;
+	padding:1px 8px;
+	position:static;
+}
+#mainCol #index .details {
+	clear:left;
+	color:#888888;
+	height:20px;
+	position:relative;
+	top:2px;
+}
+#mainCol #index li.book .cover img {
+	-moz-box-shadow:1px 2px 3px #555555;
+	margin:10px;
+}
+#mainCol #index li.book .cover span {
+	display:block;
+	height:32px;
+	left:0.417em;
+	position:absolute;
+	text-indent:-9999px;
+	top:0.417em;
+	width:32px;
+}
+#mainCol #index li.book .details .source {
+	line-height:14px;
+	max-height:30px;
+	overflow:hidden;
+	width:100%;
+	float:left;
+	font-size:0.917em;
+}
+#mainCol #index .details .source .date {
+	bottom:5px;
+	color:#888888;
+	font-size:0.85em;
+	font-weight:bold;
+	padding:0 3px;
+	position:absolute;
+	right:10px;
+	white-space:nowrap;
+}
+#mainCol #index li.book .details .title {
+	-moz-border-radius:3px 3px 3px 3px;
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #DDDDDD;
+	display:block;
+	margin-top:7px;
+	padding:0 5px;
+	text-align:center;
+	color:#888888;
+}
+
+#mainCol #index li.book .details .title a:hover {
+	color:#888888;
+}
+
+#mainCol #index li.book .details .comments {
+	bottom:3px;
+	display:block;
+	left:18px;
+	margin:0;
+	position:absolute;
+	overflow:visible;
+	padding:1px 0 2px;
+}
+
+#mainCol #index li.book .details .comments a {
+	color:#888888;
+	font-size: 0.85em;
+}
+
+#subCol .recommend-books img {
+	background:none repeat scroll 0 0 #FFFFFF;
+	border:1px solid #DDDDDD;
+	margin-top:15px;
+	padding:3px;
+}
+#subCol .recommend-books p.promote a {
+	background:none repeat scroll 0 0 #E4E4E4;
+	color:#666666;
+	display:block;
+	font-family:Helvetica,Arial,sans-serif;
+	font-weight:bold;
+	line-height:14px;
+/*	margin:4px 0 0 13px;*/
+	padding:4px 6px;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #FFFFFF;
+	width:131px;
+}
+
+#subCol .recommend-books p.promote a:hover {
+background:none repeat scroll 0 0 #1985BE;
+color:#FFFFFF;
+text-shadow:1px 1px 1px #555555;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Zuikong</title>
+
+  <%= stylesheet_link_tag 'reset', 'main', 'app', 'syntax' %>
+  <%= stylesheet_link_tag 'print', :media => 'print' %>
+
+  <%= javascript_include_tag 'jquery', 'rails', 'guides', 'app' %>
+
+	<!--[if IE 6]>
+		<link href="/stylesheets/ie.css" media="screen" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<link href="/feeds.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+</head>
+
+<body class="guide">
+
+<div id="topNav">
+  <div class="wrapper top-nav-text">
+    <%= render :partial => '/share/top_nav' %>
+  </div>
+</div>
+
+<div id="header">
+  <div class="wrapper clearfix">
+    <h1><a href="/" title="Return to home page">Guides.rubyonrails.org</a></h1>
+    <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+    <ul class="nav">
+      <%= controller_nav_partial(params[:controller]) %>
+    </ul>
+  </div>
+</div>
+
+<hr class="hide" />
+	
+<div id="feature">
+  <div class="wrapper">
+    <h3>后台管理</h3>
+    <p>
+      你已经有帐号了？ 那么请<a href="/login">登录</a>吧，如果没有，马上<a href="/signup">加入我们</a>!
+    </p>
+
+    <div id="subCol">
+      <%= render :partial => '/share/subcol' %>
+
+      <div class="navigator category">
+        <h4>按栏目浏览</h4>
+        <dl>
+          <%= render :partial => '/share/category' %>
+        </dl>
+      </div>
+
+      <div class="navigator subject">
+        <h4>按内容浏览</h4>
+        <dl>
+          <%= render :partial => '/share/subject' %>
+        </dl>
+      </div>
+
+      <div class="navigator recommend-books">
+        <h4>推荐书籍</h4>
+        <dl>
+          <%= render :partial => '/share/recommend' %>
+        </dl>
+      </div>
+
+      <div class="navigator tags">
+        <h4>热门标签浏览</h4>
+        <ul class="tags">
+          <%= render :partial => '/share/tag' %>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="container">
+
+  <div class='wrapper'>
+    <div class='mainCol'>
+      <%= yield %>
+    </div>
+  </div>
+
+</div>
+	
+<hr class="hide" />
+<div id="footer">
+  <%= render :partial => '/share/footer' %>
+</div>
+	
+</body>
+</html>
