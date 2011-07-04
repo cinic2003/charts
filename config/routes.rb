@@ -8,6 +8,7 @@ Thought::Application.routes.draw do
       get 'line_chart'
       get 'line_dot'
       get 'hbar'
+      get 'bar'
     end
   end
 
@@ -22,6 +23,7 @@ Thought::Application.routes.draw do
       get 'get_linedot'
       get 'get_hollowdot'
       get 'get_hbar'
+      get 'get_bar'
     end
   end
 

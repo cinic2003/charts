@@ -249,7 +249,48 @@ class ChartDataController < ApplicationController
   end
 
   def get_bar
-    
+    title = Title.new('Multi Bar')
+    bar = Bar.new
+#    10.times do 
+      bar.values = [2,5,1,7,3,8,6,9,3]
+#    end
+    bar.tooltip = "Title Bar l<br>val = #val#"
+    bar.colour = '#47092D'
+
+    bar2 = Bar.new
+    bar2.set_tooltip("Spoon {#val#}<br>Title Bar 2")
+    bar2.set_colour('#CC2AA3')
+
+    vals = []
+    4.times do 
+      vals << rand(10)
+    end
+
+    tmp = BarValue.new(5)
+    tmp.set_colour('#000000')
+    tmp.set_tooltip("Spoon {#val#}<br>Title Bar 2 <br>Special data poin")
+    vals << tmp
+    4.times do 
+      vals << rand(10)
+    end
+    vals = vals.flatten
+
+    bar2.values = vals
+
+    t = Tooltip.new
+    t.set_shadow(false)
+    t.stroke = 5
+    t.colour = '#6E604F'
+    t.set_background_colour("#BDB396")
+    t.set_title_style("{font-size: 14px; color: #CC2A43;}")
+    t.set_body_style("{font-size: 10px; font-weight: bold; color: #000000;}")
+    chart = OpenFlashChart.new
+    chart.title = title
+    chart.add_element(bar)
+    chart.add_element(bar2)
+    chart.set_tooltip(t)
+
+    render :text => chart.to_s
   end
 
   def get_linedot

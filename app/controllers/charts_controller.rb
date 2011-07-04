@@ -33,4 +33,8 @@ class ChartsController < ApplicationController
     @hbar = open_flash_chart_object(800, 400, '/chart_data/get_hbar')
   end
 
+  def bar
+    @bar = open_flash_chart_object(700, 400, '/chart_data/get_bar')
+  end
+
 end
