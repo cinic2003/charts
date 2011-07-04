@@ -3,12 +3,10 @@
  
 <div class='wrapper'>
   <h2>Charts</h2>
-  <% @charts.each do |chart| %>
-    <%= chart.html_safe %>
-  <% end %>
 
-  <div class='pagination'>
-    <%= will_paginate @charts %>
-  </div>
+  <%= @line.html_safe %>
+  <%= @pie.html_safe %>
+  <%= @graph.html_safe %>
+  <%= @line_dot.html_safe %>
+
 </div>
-

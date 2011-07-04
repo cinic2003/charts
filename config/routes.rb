@@ -22,8 +22,12 @@ Thought::Application.routes.draw do
     end
   end
 
-  resources :users do
-    
+  resources :home do
+    collection do
+      get 'share_list'
+      get 'question_list'
+      get 'users_list'
+    end
   end
 
 
